@@ -14,6 +14,24 @@ return {
     end
   },
   {
+    "danymat/neogen",
+    event = "VeryLazy",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    keys = {
+      { "<leader>nf", ":lua require('neogen').generate()<CR>", desc = "Create Auto Comment" },
+    },
+    config = function(_, opts)
+      require("neogen").setup({
+        enabled = true,
+        snippet_engine = "luasnip",
+        input_after_comment = true,
+        languages = {
+          ["cpp.doxygen"] = require("neogen.configurations.cpp")
+        },
+      })
+    end,
+  },
+  {
     "CRAG666/code_runner.nvim",
     event = "VeryLazy",
     keys = {
