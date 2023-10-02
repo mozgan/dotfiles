@@ -41,23 +41,6 @@ dmenu.background: #2f343f
 dmenu.selbackground: #bf616a
 dmenu.foreground: #d8dee8
 
-! Rofi
-rofi.width: 50
-rofi.lines: 15
-rofi.columns: 1
-
-rofi.color-enabled: true
-rofi.color-window: #2f343f, #2f343f, #2f343f
-rofi.color-normal: #2f343f, #d8dee8, #2f343f, #2f343f, #bf616a
-rofi.color-active: #2f343f, #b48ead, #2f343f, #2f343f, #93e5cc
-rofi.color-urgent: #2f343f, #ebcb8b, #2f343f, #2f343f, #ebcb8b    
-
-! Behaviour
-rofi.terminal: kitty
-rofi.levenshtein-sort: true
-rofi.fuzzy: true
-rofi.kb-cancel: Escape,Control+c
-
 ! Font settings
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
@@ -65,11 +48,11 @@ Xft.hintstyle: hintslight
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
-#Xft.hintstyle: hintfull
-#Xft.hinting: 1
-#Xft.antialias: true
-#Xft.rgba: rgb
-#Xft.lcdfilter:              lcdlight
-#Xft.dpi:                    96
+!Xft.hintstyle: hintfull
+!Xft.hinting: 1
+!Xft.antialias: true
+!Xft.rgba: rgb
+!Xft.lcdfilter:              lcdlight
+!Xft.dpi:                    96
 
 

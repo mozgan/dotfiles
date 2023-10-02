@@ -98,7 +98,7 @@ return {
       require("statuscol").setup({
         filetype_exclude = { 'help', 'alpha', 'dashboard', 'neo-tree', 'Trouble', 'lazy', 'mason' },
         foldfunc = "builtin",
-        order = "NSFs",
+        --order = "NSFs",
         segments = {
           { -- sign
             " ",

@@ -120,4 +120,5 @@ autocmd({ "BufWritePre" }, {
 vim.api.nvim_command("filetype plugin indent on")
 
 
+--vim.api.nvim_exec_autocmds("FileType", {})
 

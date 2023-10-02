@@ -129,4 +129,6 @@ _deps
 _build
 build
 
+# code
+.vscode
 

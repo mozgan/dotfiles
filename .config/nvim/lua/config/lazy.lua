@@ -20,7 +20,7 @@ require("lazy").setup({
     { import = "base" },
     { import = "ui" },
     { import = "devel" },
-    --{ import = "lang" },
+    { import = "lang" },
   },
   defaults = { lazy = true, version = nil },
   install = {
@@ -29,7 +29,7 @@ require("lazy").setup({
   },
   checker = {
     enabled = true,  -- automatically check for plugin updates
-    notify = true,
+    notify = false,
     --frequency = 3600, -- check for updates every hour
     --concurrency = nil, ---@type number? set to 1 to check for updates very slowly
   },
