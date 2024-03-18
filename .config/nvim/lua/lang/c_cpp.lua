@@ -34,14 +34,15 @@ return {
           server = {
             root_dir = function(...)
               -- using a root .clang-format or .clang-tidy file messes up projects, so remove them
-              return require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", "configure.ac", ".git")(...)
+              return require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", "configure.ac", ".git", ".clang-tidy", "clang-format")(...)
             end,
+            single_file_support = true,
             capabilities = {
-              offsetEncoding = { "utf-16" },
+              offsetEncoding = { "utf-8", "utf-16" },
             },
             cmd = {
               "clangd",
-              "-stdlib=libc++",
+              "-stdlib=libstdc++",
               "--background-index",
               "--header-insertion=iwyu",
               "--header-insertion-decorators",

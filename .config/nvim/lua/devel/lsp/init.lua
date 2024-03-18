@@ -94,9 +94,9 @@ return {
           formatting.black.with({ extra_args = { "--fast" } }),
 
           -- C++
-          --formatting.clang_format.with({
-          --  args = { "-style=Google" }
-          --}),
+          formatting.clang_format.with({
+            args = { "-style=Google" }
+          }),
           --diagnostics.clang_check,
           diagnostics.cpplint.with({
             args = { "--filter=-legal,-build/include_subdir,-build/namespaces,-build/c++11,-whitespace/comments", "$FILENAME" }
