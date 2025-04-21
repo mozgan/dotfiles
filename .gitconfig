@@ -1,7 +1,7 @@
 [user]
 	name = Mehmet Ozgan 
-	email = arge4@avciss.com
-	signingkey = M. Ozgan <arge4@avciss.com>
+  email = mozgan@gmail.com
+  signingkey = M. Ozgan <mozgan@gmail.com>
 
 [core]
 	excludesfile = ~/.gitignore_global

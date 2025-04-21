@@ -9,10 +9,12 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/sbin:$PATH
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/cuda/bin:$PATH"
 
 #export LDFLAGS="-L/usr/local/opt/llvm/lib/c++ -Wl,-rpath,/usr/local/opt/llvm/lib/c++"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -31,7 +33,7 @@ DEFAULT_USER=$(whoami)
 
 plugins=(colored-man-pages common-aliases copybuffer extract \
         docker git gitignore git-extras gitfast git-prompt \
-        python pyenv sudo vi-mode macos \
+        bazel python pyenv sudo vi-mode macos \
         zsh-interactive-cd zsh-navigation-tools zsh-syntax-highlighting \
         zsh-autosuggestions zsh-completions)
 
@@ -147,7 +149,7 @@ fi
 if [ -x "$(command -v exa)" ]; then
   alias ls="exa --icons --group --group-directories-first --octal-permissions --classify"
   #alias ls=' exa --group-directories-first'
-  alias ll="clear; exa --icons --git -h -l --group-directories-first --time-style long-iso --color automatic"
+  alias ll="clear; exa --icons -h -l --group-directories-first --time-style long-iso --color automatic"
   alias tree="ls --tree"
 fi
 
@@ -167,3 +169,23 @@ fi
 #if [[ "$(command -v fortune)" && "$(command -v cowsay)" && "$(command -v lolcat)" ]]; then
 #  fortune -s computers | cowsay -f daemon | lolcat
 #fi
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/avci/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/avci/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/avci/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/avci/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/avci/.lmstudio/bin"
